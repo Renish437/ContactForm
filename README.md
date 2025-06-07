@@ -43,7 +43,7 @@ A simple, reusable contact form package for Laravel using Livewire v3. Perfect f
 
 Include the Livewire component in your Blade file:
 
-<livewire:contact-form />
+    <livewire:contact-form />
 
 That's it! 🎉 The form includes fields for name, email, and message.
 📨 Email Support
@@ -53,7 +53,7 @@ To enable email notifications, configure your Mailable in the package or overrid
 
 If you want to customize the form view:
 
-php artisan vendor:publish --tag=contactform-config
+    php artisan vendor:publish --tag=contactform-config
 
 The views will be published to:
 
@@ -65,7 +65,7 @@ The package automatically loads its own migrations.
 
 To run them:
 
-php artisan migrate
+    php artisan migrate
 
 ✅ Validation Rules
 
