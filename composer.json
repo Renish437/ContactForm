@@ -1,0 +1,28 @@
+{
+    "name": "codewithren/contactform",
+    "description": "Laravel contact form package",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codewithren\\Contactform\\": "src/"
+        }
+    },
+    "extra":{
+        "laravel": {
+            "providers": [
+                "Codewithren\\Contactform\\ContactFormServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Renish Siwakoti"
+        }
+    ],
+
+    "minimum-stability": "dev",
+    "require": {
+         "livewire/livewire": "^3.0"
+    }
+}
