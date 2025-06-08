@@ -19,8 +19,8 @@ A simple, reusable contact form package for Laravel using Livewire v3. Perfect f
    
 
 
-    If using a local path repo (monorepo or symlink):
-    Make sure your composer.json includes:
+If using a local path repo (monorepo or symlink):
+Make sure your composer.json includes:
 
     "repositories": [
       {
