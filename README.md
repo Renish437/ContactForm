@@ -1,4 +1,4 @@
-#  Laravel Livewire Contact Form
+#  Laravel Livewire Contact Form Package
 
 This is a customizable contact form package for Laravel using Livewire. Easily publish views and components for user-side customization.
 
