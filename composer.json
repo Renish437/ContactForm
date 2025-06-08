@@ -20,6 +20,8 @@
             "name": "Renish Siwakoti"
         }
     ],
+    "keywords": ["laravel", "livewire", "contact", "form", "package"],
+
 
     "minimum-stability": "dev",
     "require": {
