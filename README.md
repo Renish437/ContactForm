@@ -78,7 +78,32 @@ Include the scripts in your layout
                 }
             });
         });
+        window.addEventListener('alert-error', (event) => {
+            var data = event.detail;
+            console.log(data);
+            Swal.fire({
+                title: "Error",
+                text: data.message,
+                icon: "error",
+                toast: true,
+                position: "top-end",
+                showCloseButton: true,
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                customClass: {
+                    popup: 'rounded-xl shadow-md text-sm bg-white',
+                    title: 'font-semibold text-gray-800',
+                    closeButton: 'text-gray-500 hover:text-red-500',
+                },
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            });
+        });
     </script>
+
 
 🛠 Usage
 
@@ -92,7 +117,7 @@ That's it! 🎉 The form includes fields for name, email, and message.
 To enable email notifications, configure your Mailable in the package or override the email logic using events or extending the component.
 🧾 Publish Views (Optional)
 
-If you want to customize the form view:
+If you want to customize email address:
 
     php artisan vendor:publish --tag=contactform-config
 
