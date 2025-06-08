@@ -16,6 +16,7 @@ A simple, reusable contact form package for Laravel using Livewire v3. Perfect f
 📦 Installation
 
    composer require codewithren/contactform:dev-main --with-all-dependencies
+   
 
 
     If using a local path repo (monorepo or symlink):
@@ -41,6 +42,44 @@ A simple, reusable contact form package for Laravel using Livewire v3. Perfect f
 
     Sweetalert2
 
+Install Sweetalert through composer and run our installer.
+
+    composer require wavey/sweetalert && php artisan sweetalert:install
+
+Include the Sweetalert2 javascript and then include our sweetalert 2 components.
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @include('sweetalert::sweetalert')
+
+Include the scripts in your layout
+     
+    <script>
+        window.addEventListener('alert', (event) => {
+            var data = event.detail;
+            console.log(data);
+            Swal.fire({
+                title: "Success",
+                text: data.message,
+                icon: "success",
+                toast: true,
+                position: "top-end",
+                showCloseButton: true,
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                customClass: {
+                    popup: 'rounded-xl shadow-md text-sm bg-white',
+                    title: 'font-semibold text-gray-800',
+                    closeButton: 'text-gray-500 hover:text-red-500',
+                },
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            });
+        });
+    </script>
+    
 🛠 Usage
 
 Include the Livewire component in your Blade file:
@@ -69,14 +108,7 @@ To run them:
 
     php artisan migrate
 
-Install Sweetalert through composer and run our installer.
 
-    composer require wavey/sweetalert && php artisan sweetalert:install
-
-Include the Sweetalert2 javascript and then include our sweetalert 2 components.
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    @include('sweetalert::sweetalert')
 
 ✅ Validation Rules
 
