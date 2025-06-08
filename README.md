@@ -15,7 +15,7 @@ A simple, reusable contact form package for Laravel using Livewire v3. Perfect f
 
 📦 Installation
 
-   composer require codewithren/contactform:dev-main --with-all-dependencies
+    composer require codewithren/contactform:dev-main --with-all-dependencies
    
 
 
