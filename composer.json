@@ -23,6 +23,7 @@
 
     "minimum-stability": "dev",
     "require": {
-         "livewire/livewire": "^3.0"
+         "livewire/livewire": "^3.0",
+        "wavey/sweetalert": "^1.0@dev"
     }
 }
