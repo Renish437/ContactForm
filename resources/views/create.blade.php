@@ -10,18 +10,11 @@
 </head>
 <body>
   @include('sweetalert::sweetalert')
-     @livewireStyles
-     {{-- @if(Session::has('success'))
-        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-            <strong class="font-bold">Success!</strong>
-            <span class="block sm:inline">{{ Session::get('success') }}</span>
-        </div>
-        @endif --}}
+  @include('contactform::contactform')
 
-        <div id="contactForm" class="bg-green-100 border hidden border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
-            <strong class="font-bold">Success!</strong>
-            <span class="block sm:inline">{{ Session::get('success') }}</span>
-        </div>
+     @livewireStyles
+     
+      
     
           @livewire('contact-form')
      
@@ -36,6 +29,30 @@ Swal.fire({
   title: "Success",
   text: data.message,
   icon: "success",
+  toast: true,
+  position: "top-end",
+  showCloseButton: true,
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  customClass: {
+    popup: 'rounded-xl shadow-md text-sm bg-white',
+    title: 'font-semibold text-gray-800',
+    closeButton: 'text-gray-500 hover:text-red-500',
+  },
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+});
+       });
+       window.addEventListener('alert-error', (event) => {
+       var data= event.detail;
+       console.log(data);
+Swal.fire({
+  title: "Error",
+  text: data.message,
+  icon: "error",
   toast: true,
   position: "top-end",
   showCloseButton: true,

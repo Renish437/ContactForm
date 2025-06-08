@@ -23,7 +23,7 @@ class ContactForm extends Component
     $admin_email = config('contactform.admin-email');
 
     if($admin_email==null || $admin_email==''){
-      $this->dispatch('alert', 
+      $this->dispatch('alert-error', 
     
     message:'The value of admin-email is null'
   );

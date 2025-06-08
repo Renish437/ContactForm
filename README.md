@@ -79,7 +79,7 @@ Include the scripts in your layout
             });
         });
     </script>
-    
+
 🛠 Usage
 
 Include the Livewire component in your Blade file:
@@ -108,7 +108,10 @@ To run them:
 
     php artisan migrate
 
+To publish the resources views and livewire component file
 
+    php artisan vendor:publish --tag=contactform-views
+    php artisan vendor:publish --tag=contactform-livewire
 
 ✅ Validation Rules
 

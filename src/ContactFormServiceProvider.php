@@ -31,6 +31,13 @@ class ContactFormServiceProvider extends ServiceProvider
     $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
     Livewire::component('contact-form', ContactForm::class);
+        $this->publishes([
+        __DIR__.'/../resources/views' => resource_path('views/vendor/contactform'),
+    ], 'contactform-views');
+
+    $this->publishes([
+        __DIR__.'/Http/Livewire/ContactForm.php' => app_path('Http/Livewire/ContactForm.php'),
+    ], 'contactform-livewire');
 
     
     }
