@@ -39,6 +39,8 @@ A simple, reusable contact form package for Laravel using Livewire v3. Perfect f
 
     Livewire 3+
 
+    Sweetalert2
+
 🛠 Usage
 
 Include the Livewire component in your Blade file:
@@ -66,6 +68,15 @@ The package automatically loads its own migrations.
 To run them:
 
     php artisan migrate
+
+Install Sweetalert through composer and run our installer.
+
+    composer require wavey/sweetalert && php artisan sweetalert:install
+
+Include the Sweetalert2 javascript and then include our sweetalert 2 components.
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @include('sweetalert::sweetalert')
 
 ✅ Validation Rules
 
