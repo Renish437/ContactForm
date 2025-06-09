@@ -94,6 +94,18 @@ Include the scripts in your layout
         });
     </script>
 
+Make sure to customize email address:
+
+    php artisan vendor:publish --tag=contactform-config
+    
+
+🗃️ Migrations
+
+The package automatically loads its own migrations.
+
+To run them:
+
+    php artisan migrate
 
 🛠 Usage
 
@@ -107,27 +119,16 @@ That's it! 🎉 The form includes fields for name, email, and message.
 To enable email notifications, configure your Mailable in the package or override the email logic using events or extending the component.
 🧾 Publish Config required 
 
-Make sure to customize email address:
 
-    php artisan vendor:publish --tag=contactform-config
-    php artisan vendor:publish --tag=contactform-views
-
-The views will be published to:
-
-resources/views/vendor/contactform/
-
-🗃️ Migrations
-
-The package automatically loads its own migrations.
-
-To run them:
-
-    php artisan migrate
 
 To publish the resources views and livewire component file (optional).
 
     php artisan vendor:publish --tag=contactform-views
     php artisan vendor:publish --tag=contactform-livewire
+
+The views will be published to:
+
+resources/views/vendor/contactform/
 
 ✅ Validation Rules
 
