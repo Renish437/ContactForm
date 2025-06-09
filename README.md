@@ -58,7 +58,7 @@ Include the Sweetalert2 javascript and then include our sweetalert 2 components.
 Include the scripts in your layout
      
     <script>
-        window.addEventListener('alert', (event) => {
+        window.addEventListener('alert-success', (event) => {
             var data = event.detail;
             console.log(data);
             Swal.fire({
@@ -137,7 +137,7 @@ To run them:
 
     php artisan migrate
 
-To publish the resources views and livewire component file
+To publish the resources views and livewire component file (optional).
 
     php artisan vendor:publish --tag=contactform-views
     php artisan vendor:publish --tag=contactform-livewire
