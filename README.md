@@ -52,13 +52,13 @@ Install Sweetalert through composer and run our installer.
 
 Include the Sweetalert2 javascript and then include our sweetalert 2 components.
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @include('sweetalert::sweetalert')
 
 Include the scripts in your layout
      
     <script>
-        window.addEventListener('alert-success', (event) => {
+        window.addEventListener('alert', (event) => {
             var data = event.detail;
             console.log(data);
             Swal.fire({
