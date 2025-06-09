@@ -94,13 +94,14 @@ Include the scripts in your layout
         });
     </script>
 
-Make sure to customize email address:
-
-    php artisan vendor:publish --tag=contactform-config
-    
 To enable email notifications, configure your Mailable in the package or override the email logic using events or extending the component.
 🧾 Publish Config required 
 
+    php artisan vendor:publish --tag=contactform-config
+
+In .env file add ADMIN_EMAIL and make sure to configure your stmp
+
+    ADMIN_EMAIL="admin@gmail.com"
 
 🛠 Usage
 
