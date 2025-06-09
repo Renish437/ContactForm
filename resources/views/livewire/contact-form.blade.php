@@ -24,7 +24,7 @@
         </div>
 
         <button type="submit" class="w-full h-12 bg-indigo-600 hover:bg-indigo-800 text-white rounded-sm font-semibold">
-            <span wire:loading wire:target="submitContactForm">Loading...</span>
+            <span wire:loading wire:target="submitContactForm">Sending...</span>
             <span wire:loading.remove  wire:target="submitContactForm" >Send Message</span></button>
     </form>
 </div>

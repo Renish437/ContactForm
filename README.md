@@ -22,20 +22,6 @@ A simple, reusable contact form package for Laravel using Livewire v3. Perfect f
     composer require codewithren/contactform:dev-main --with-all-dependencies
    
 
-
-If using a local path repo (monorepo or symlink):
-Make sure your composer.json includes:
-
-    "repositories": [
-      {
-        "type": "path",
-        "url": "packages/codewithren/contactform",
-        "options": {
-          "symlink": true
-        }
-      }
-    ]
-
 🧠 Requirements
 
     PHP 8.2+
@@ -50,7 +36,7 @@ Install Sweetalert through composer and run our installer.
 
     composer require wavey/sweetalert && php artisan sweetalert:install
 
-Include the Sweetalert2 javascript and then include our sweetalert 2 components.
+Include the Sweetalert2 javascript and then include our sweetalert 2 layout component.
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @include('sweetalert::sweetalert')
@@ -119,11 +105,12 @@ That's it! 🎉 The form includes fields for name, email, and message.
 📨 Email Support
 
 To enable email notifications, configure your Mailable in the package or override the email logic using events or extending the component.
-🧾 Publish Views (Optional)
+🧾 Publish Config required 
 
-If you want to customize email address:
+Make sure to customize email address:
 
     php artisan vendor:publish --tag=contactform-config
+    php artisan vendor:publish --tag=contactform-views
 
 The views will be published to:
 
