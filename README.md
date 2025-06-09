@@ -98,6 +98,15 @@ Make sure to customize email address:
 
     php artisan vendor:publish --tag=contactform-config
     
+To enable email notifications, configure your Mailable in the package or override the email logic using events or extending the component.
+🧾 Publish Config required 
+
+
+🛠 Usage
+
+Include the Livewire component in your Blade file:
+
+    <livewire:contact-form />
 
 🗃️ Migrations
 
@@ -106,18 +115,12 @@ The package automatically loads its own migrations.
 To run them:
 
     php artisan migrate
-
-🛠 Usage
-
-Include the Livewire component in your Blade file:
-
-    <livewire:contact-form />
+    php artisan queue:work
 
 That's it! 🎉 The form includes fields for name, email, and message.
 📨 Email Support
 
-To enable email notifications, configure your Mailable in the package or override the email logic using events or extending the component.
-🧾 Publish Config required 
+
 
 
 
